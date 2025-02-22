@@ -21,17 +21,48 @@
 			remoteGlobalIDString = 50827FE52D698A120034756A;
 			remoteInfo = tryswifttokyo2025;
 		};
+		5082802B2D698C910034756A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50827FDE2D698A120034756A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5082801A2D698C8F0034756A;
+			remoteInfo = TrySwiftTokyo;
+		};
+		508280352D698C910034756A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50827FDE2D698A120034756A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5082801A2D698C8F0034756A;
+			remoteInfo = TrySwiftTokyo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		50827FE62D698A120034756A /* tryswifttokyo2025.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tryswifttokyo2025.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50827FF72D698A150034756A /* tryswifttokyo2025Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tryswifttokyo2025Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		508280012D698A150034756A /* tryswifttokyo2025UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tryswifttokyo2025UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5082801B2D698C8F0034756A /* TrySwiftTokyoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrySwiftTokyoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5082802A2D698C910034756A /* TrySwiftTokyoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrySwiftTokyoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		508280342D698C910034756A /* TrySwiftTokyoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrySwiftTokyoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		508280462D698D4D0034756A /* Exceptions for "tryswifttokyo2025" folder in "TrySwiftTokyoiOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ComplexView.swift,
+				ComplexView2.swift,
+			);
+			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		50827FE82D698A120034756A /* tryswifttokyo2025 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				508280462D698D4D0034756A /* Exceptions for "tryswifttokyo2025" folder in "TrySwiftTokyoiOS" target */,
+			);
 			path = tryswifttokyo2025;
 			sourceTree = "<group>";
 		};
@@ -43,6 +74,21 @@
 		508280042D698A150034756A /* tryswifttokyo2025UITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = tryswifttokyo2025UITests;
+			sourceTree = "<group>";
+		};
+		5082801C2D698C8F0034756A /* TrySwiftTokyoiOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TrySwiftTokyoiOS;
+			sourceTree = "<group>";
+		};
+		5082802D2D698C910034756A /* TrySwiftTokyoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TrySwiftTokyoTests;
+			sourceTree = "<group>";
+		};
+		508280372D698C910034756A /* TrySwiftTokyoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TrySwiftTokyoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +115,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		508280182D698C8F0034756A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280272D698C910034756A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280312D698C910034756A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +145,9 @@
 				50827FE82D698A120034756A /* tryswifttokyo2025 */,
 				50827FFA2D698A150034756A /* tryswifttokyo2025Tests */,
 				508280042D698A150034756A /* tryswifttokyo2025UITests */,
+				5082801C2D698C8F0034756A /* TrySwiftTokyoiOS */,
+				5082802D2D698C910034756A /* TrySwiftTokyoTests */,
+				508280372D698C910034756A /* TrySwiftTokyoUITests */,
 				50827FE72D698A120034756A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +158,9 @@
 				50827FE62D698A120034756A /* tryswifttokyo2025.app */,
 				50827FF72D698A150034756A /* tryswifttokyo2025Tests.xctest */,
 				508280012D698A150034756A /* tryswifttokyo2025UITests.xctest */,
+				5082801B2D698C8F0034756A /* TrySwiftTokyoiOS.app */,
+				5082802A2D698C910034756A /* TrySwiftTokyoTests.xctest */,
+				508280342D698C910034756A /* TrySwiftTokyoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +236,74 @@
 			productReference = 508280012D698A150034756A /* tryswifttokyo2025UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5082803C2D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoiOS" */;
+			buildPhases = (
+				508280172D698C8F0034756A /* Sources */,
+				508280182D698C8F0034756A /* Frameworks */,
+				508280192D698C8F0034756A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5082801C2D698C8F0034756A /* TrySwiftTokyoiOS */,
+			);
+			name = TrySwiftTokyoiOS;
+			packageProductDependencies = (
+			);
+			productName = TrySwiftTokyo;
+			productReference = 5082801B2D698C8F0034756A /* TrySwiftTokyoiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		508280292D698C910034756A /* TrySwiftTokyoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5082803F2D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoTests" */;
+			buildPhases = (
+				508280262D698C910034756A /* Sources */,
+				508280272D698C910034756A /* Frameworks */,
+				508280282D698C910034756A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5082802C2D698C910034756A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5082802D2D698C910034756A /* TrySwiftTokyoTests */,
+			);
+			name = TrySwiftTokyoTests;
+			packageProductDependencies = (
+			);
+			productName = TrySwiftTokyoTests;
+			productReference = 5082802A2D698C910034756A /* TrySwiftTokyoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		508280332D698C910034756A /* TrySwiftTokyoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 508280422D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoUITests" */;
+			buildPhases = (
+				508280302D698C910034756A /* Sources */,
+				508280312D698C910034756A /* Frameworks */,
+				508280322D698C910034756A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				508280362D698C910034756A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				508280372D698C910034756A /* TrySwiftTokyoUITests */,
+			);
+			name = TrySwiftTokyoUITests;
+			packageProductDependencies = (
+			);
+			productName = TrySwiftTokyoUITests;
+			productReference = 508280342D698C910034756A /* TrySwiftTokyoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +325,17 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 50827FE52D698A120034756A;
 					};
+					5082801A2D698C8F0034756A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					508280292D698C910034756A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5082801A2D698C8F0034756A;
+					};
+					508280332D698C910034756A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5082801A2D698C8F0034756A;
+					};
 				};
 			};
 			buildConfigurationList = 50827FE12D698A120034756A /* Build configuration list for PBXProject "tryswifttokyo2025" */;
@@ -203,6 +355,9 @@
 				50827FE52D698A120034756A /* tryswifttokyo2025 */,
 				50827FF62D698A150034756A /* tryswifttokyo2025Tests */,
 				508280002D698A150034756A /* tryswifttokyo2025UITests */,
+				5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */,
+				508280292D698C910034756A /* TrySwiftTokyoTests */,
+				508280332D698C910034756A /* TrySwiftTokyoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +378,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		50827FFF2D698A150034756A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280192D698C8F0034756A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280282D698C910034756A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280322D698C910034756A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +429,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		508280172D698C8F0034756A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280262D698C910034756A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508280302D698C910034756A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +462,16 @@
 			isa = PBXTargetDependency;
 			target = 50827FE52D698A120034756A /* tryswifttokyo2025 */;
 			targetProxy = 508280022D698A150034756A /* PBXContainerItemProxy */;
+		};
+		5082802C2D698C910034756A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
+			targetProxy = 5082802B2D698C910034756A /* PBXContainerItemProxy */;
+		};
+		508280362D698C910034756A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
+			targetProxy = 508280352D698C910034756A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -551,6 +758,149 @@
 			};
 			name = Release;
 		};
+		5082803D2D698C920034756A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrySwiftTokyoiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5082803E2D698C920034756A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrySwiftTokyoiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		508280402D698C920034756A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrySwiftTokyo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrySwiftTokyo";
+			};
+			name = Debug;
+		};
+		508280412D698C920034756A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrySwiftTokyo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrySwiftTokyo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		508280432D698C920034756A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrySwiftTokyo;
+			};
+			name = Debug;
+		};
+		508280442D698C920034756A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7GQ8MDKWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prad.TrySwiftTokyoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrySwiftTokyo;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,6 +936,33 @@
 			buildConfigurations = (
 				508280122D698A150034756A /* Debug */,
 				508280132D698A150034756A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5082803C2D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5082803D2D698C920034756A /* Debug */,
+				5082803E2D698C920034756A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5082803F2D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508280402D698C920034756A /* Debug */,
+				508280412D698C920034756A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		508280422D698C920034756A /* Build configuration list for PBXNativeTarget "TrySwiftTokyoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508280432D698C920034756A /* Debug */,
+				508280442D698C920034756A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
