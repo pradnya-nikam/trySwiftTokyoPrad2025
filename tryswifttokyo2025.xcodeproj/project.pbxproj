@@ -53,6 +53,7 @@
 				CloudView.swift,
 				ComplexView.swift,
 				ComplexView2.swift,
+				SwiftUIView.swift,
 			);
 			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
 		};
