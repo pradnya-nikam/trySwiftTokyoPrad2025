@@ -7,8 +7,10 @@
 
 import SwiftUI
 struct SwiftUIView: View {
-  @State private var currentGradientIndex = 0
+  @State private var currentGradientIndex = -1
+  @State private var sunPosition: CGFloat = -50
   @State private var title: String
+
   private let titles = [
   "Early Morning",
   "Day",
@@ -17,7 +19,8 @@ struct SwiftUIView: View {
 
   init(currentGradientIndex: Int = 0) {
     self.currentGradientIndex = currentGradientIndex
-    self.title = titles[currentGradientIndex]
+    self.title = titles[0]
+    updateSunPosition()
   }
 
   private let gradients: [[Color]] = [
@@ -44,19 +47,49 @@ struct SwiftUIView: View {
           animateGradient()
         }
 
+      VStack{
         Text(title)
           .font(.title)
           .foregroundStyle(.white)
+        // Sun Circle
+        Circle()
+          .fill(Color.yellow)
+          .frame(width: 50, height: 50)
+          .position(x: sunPosition, y: 100)
+          .animation(.easeInOut(duration: 3), value: sunPosition)
+      }
+    }
+  }
+
+  private func updateSunPosition() {
+    // Update the sun position based on the current gradient index
+
+    switch currentGradientIndex {
+      case 0: // Early Morning
+        sunPosition = UIScreen.main.bounds.width * 0.2 // 20% from the left
+      case 1: // Day
+        sunPosition = UIScreen.main.bounds.width * 0.5 // Center
+      case 2: // Evening
+        sunPosition = UIScreen.main.bounds.width * 0.8 // 80% from the left
+      case 3: // Night
+        sunPosition = -50 //UIScreen.main.bounds.width * 0.1 // 10% from the left
+      default:
+        sunPosition = UIScreen.main.bounds.width * 0.5 // Default to center
     }
   }
 
   private func animateGradient() {
     Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-      withAnimation(.easeInOut(duration: 3), {
-        currentGradientIndex = (currentGradientIndex + 1) % gradients.count
-      }, completion: {
-        title = titles[currentGradientIndex]
-      })
+      withAnimation(
+        .easeInOut(duration: 3),
+        {
+          currentGradientIndex = (currentGradientIndex + 1) % gradients.count
+        },
+        completion: {
+          title = titles[currentGradientIndex]
+          updateSunPosition()
+
+        })
     }
   }
 
