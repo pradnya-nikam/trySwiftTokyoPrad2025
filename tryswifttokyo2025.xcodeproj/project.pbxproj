@@ -50,6 +50,7 @@
 		508280462D698D4D0034756A /* Exceptions for "tryswifttokyo2025" folder in "TrySwiftTokyoiOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				CloudView.swift,
 				ComplexView.swift,
 				ComplexView2.swift,
 			);
