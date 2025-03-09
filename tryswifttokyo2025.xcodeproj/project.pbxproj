@@ -55,6 +55,7 @@
 				ComplexView2.swift,
 				SkyView.swift,
 				SwiftUIView.swift,
+				TreeView.swift,
 			);
 			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
 		};
