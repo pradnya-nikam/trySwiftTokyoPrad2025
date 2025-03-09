@@ -12,7 +12,7 @@ struct ContentView: View {
 //      ComplexViewWithoutDrawingGroup()
 //      SwiftUIView()
 //      SkyView(numberOfClouds: 20)
-      TreeView(numberOfPetals: 100)
+      TreeView(numberOfPetals: 500)
     }
 }
 
