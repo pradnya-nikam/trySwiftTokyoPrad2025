@@ -8,43 +8,78 @@
 import SwiftUI
 
 struct CloudView: View {
+
   var body: some View {
     CloudShape()
       .fill(Color.white)
-      .frame(width: 300, height: 100)
-      .shadow(color: .gray, radius: 5, x: 0, y: 5)
-      .padding()
-      .background(Color.blue.opacity(0.3))
-      .cornerRadius(10)
+      .frame(width: 220, height: 120)
+      .shadow(color: .white, radius: 5, x: 0, y: 0)
+      .drawingGroup()  // add/remove this line to see performance change
+
   }
 }
 
 struct CloudShape: Shape {
+  let width: CGFloat = 100
+  let height: CGFloat = 60
+
   func path(in rect: CGRect) -> Path {
     var path = Path()
+    let dx1 = CGFloat.random(in: 40...90)
+    let dy1 = CGFloat.random(in: 10...30)
+    let dx2 = CGFloat.random(in: 40...80)
+    let dy2 = CGFloat.random(in: 10...30)
+    let dx3 = CGFloat.random(in: 10...60)
+    let dy3 = CGFloat.random(in: 10...50)
 
-    // Draw the main body of the cloud
-    path.addEllipse(in: CGRect(x: rect.midX - 50, y: rect.midY - 20, width: 100, height: 60))
-    path.addEllipse(in: CGRect(x: rect.midX - 80, y: rect.midY - 40, width: 100, height: 80))
-    path.addEllipse(in: CGRect(x: rect.midX, y: rect.midY - 30, width: 100, height: 70))
-    path.addEllipse(in: CGRect(x: rect.midX + 50, y: rect.midY - 20, width: 100, height: 60))
+    path
+      .addEllipse(
+        in: CGRect(
+          x: rect.midX - dx1,
+          y: rect.midY - dy1,
+          width: width + dx1/2,
+          height: height
+        )
+      )
+    path
+      .addEllipse(
+        in: CGRect(
+          x: rect.midX - dx2,
+          y: rect.midY - dy2,
+          width: width,
+          height: height + 0
+        )
+      )
+    path
+      .addEllipse(
+        in: CGRect(
+          x: rect.midX,
+          y: rect.midY - dy3,
+          width: width,
+          height: height + dy3/2
+        )
+      )
+    //rightmost
+    path
+      .addEllipse(
+        in: CGRect(
+          x: rect.midX - dx3,
+          y: rect.midY - dy3,
+          width: width,
+          height: height
+        )
+      )
 
     return path
   }
 }
 
-//struct ContentView: View {
-//  var body: some View {
-//    CloudShape()
-//      .fill(Color.white)
-//      .frame(width: 200, height: 100)
-//      .shadow(color: .gray, radius: 5, x: 0, y: 5)
-//      .padding()
-//      .background(Color.blue.opacity(0.3))
-//      .cornerRadius(10)
-//  }
-//}
-
 #Preview {
+  ZStack {
+    Color.black
+      .opacity(0.5)
     CloudView()
+  }
+  
+
 }

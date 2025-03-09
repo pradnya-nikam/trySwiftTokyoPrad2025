@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 //      ComplexViewWithoutDrawingGroup()
-      SwiftUIView()
+//      SwiftUIView()
+      SkyView(numberOfClouds: 20)
     }
 }
 
