@@ -39,28 +39,32 @@ struct SwiftUIView: View {
 
   var body: some View {
     ZStack {
-      LinearGradient(
-        gradient: Gradient(
-          stops: gradientStops(
-            for: gradients[currentGradientIndex])),
-        startPoint: .top,
-        endPoint: .bottom)
-        .ignoresSafeArea()
+      gradient(index: currentGradientIndex)
         .onAppear {
           animateGradient()
         }
 
-      VStack{
+      VStack {
         Text(title)
           .font(.title)
+          .fontWeight(.bold)
           .foregroundStyle(.white)
         Circle()
           .fill(circleColor)
           .frame(width: 50, height: 50)
           .position(sunPosition())
-//          .animation(.easeInOut(duration: 1), value: currentAngleIndex) // Animate sun rotation
       }
     }
+  }
+
+  func gradient(index: Int) -> some View {
+    LinearGradient(
+      gradient: Gradient(
+        stops: gradientStops(
+          for: gradients[currentGradientIndex])),
+      startPoint: .top,
+      endPoint: .bottom)
+    .ignoresSafeArea()
   }
 
   private func animateGradient() {
