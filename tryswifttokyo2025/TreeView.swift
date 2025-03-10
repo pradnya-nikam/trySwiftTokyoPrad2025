@@ -35,6 +35,8 @@ struct FallingPetal: View {
     PetalShape()
       .fill(LinearGradient(gradient: Gradient(colors: [Color(red: 1.0, green: 0.75, blue: 0.8).opacity(0.7), Color(red: 1.0, green: 0.5, blue: 0.7).opacity(0.7)]), startPoint: .top, endPoint: .bottom)) // Beautiful pink gradient with opacity
       .frame(width: 30, height: 15) // Size of the petal
+      .shadow(color: .white, radius: 1)
+      .drawingGroup()
       .position(position)
       .onAppear {
         animatePetal()
@@ -58,12 +60,12 @@ struct TreeView: View { // Renamed from SkyView to TreeView
 
   var body: some View {
     ZStack {
-      Color(red: 0.53, green: 0.81, blue: 0.98) // Beautiful sky blue color
-        .edgesIgnoringSafeArea(.all)
+//      Color(red: 0.53, green: 0.81, blue: 0.98) // Beautiful sky blue color
+//        .edgesIgnoringSafeArea(.all)
 
       ForEach(0..<petalCount, id: \.self) { index in
-        let startX = CGFloat.random(in: UIScreen.main.bounds.width * 0.8...UIScreen.main.bounds.width) // Start farther on the right side
-        let startY = CGFloat.random(in: -50...0) // Start above the screen
+        let startX = CGFloat.random(in: UIScreen.main.bounds.width * 0.9...UIScreen.main.bounds.width) // Start farther on the right side
+        let startY = CGFloat.random(in: 0...50)
         FallingPetal(startPosition: CGPoint(x: startX, y: startY))
           .onAppear {
             // Start the animation immediately

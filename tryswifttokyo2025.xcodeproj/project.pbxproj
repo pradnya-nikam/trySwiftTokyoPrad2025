@@ -53,6 +53,7 @@
 				CloudView.swift,
 				ComplexView.swift,
 				ComplexView2.swift,
+				SceneryView.swift,
 				SkyView.swift,
 				SwiftUIView.swift,
 				TreeView.swift,
