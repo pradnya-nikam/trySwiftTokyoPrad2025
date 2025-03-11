@@ -3,13 +3,13 @@ import SwiftUI
 struct SceneryView: View {
   var body: some View {
     ZStack {
-      Color(red: 0.53, green: 0.81, blue: 0.98) // Beautiful sky blue color
+      Color(red: 0.53, green: 0.81, blue: 0.98)
         .edgesIgnoringSafeArea(.all)
-      SkyView(numberOfClouds: 50)
+      SkyView(numberOfClouds: 30)
       VStack{
         Spacer()
           .frame(height: 350)
-        TreeView(numberOfPetals: 100)
+        TreeView(numberOfPetals: 500)
       }
       CherryBlossomTreeView()
     }
@@ -26,19 +26,18 @@ struct CherryBlossomTreeView: View {
     UIScreen.main.bounds.width/2 + 50
   }
   private var imageHeight: CGFloat {
-    UIScreen.main.bounds.height/2 + 50
+    UIScreen.main.bounds.height/2 + 40
   }
   var body: some View {
     VStack {
       Spacer()
-        .frame(height: 200)
+        .frame(height: 100)
       HStack {
         Spacer()
           .frame(width: UIScreen.main.bounds.width - imageWidth)
         Image("cherry-blossom-tree")
           .resizable()
           .aspectRatio(contentMode: .fill)
-        // this is the magic trick
           .frame(
             minWidth: imageWidth,
             maxWidth: .infinity,

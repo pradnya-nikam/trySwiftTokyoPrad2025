@@ -33,7 +33,7 @@ struct SkyView: View {
 
   // Function to generate random positions for clouds
   private func randomPosition() -> CGPoint {
-    let x = CGFloat.random(in: 0...(UIScreen.main.bounds.width + 200))
+    let x = CGFloat.random(in: 0...UIScreen.main.bounds.width)
     let y = CGFloat.random(in: 0...(UIScreen.main.bounds.height)/2) // Top half of the screen
     return CGPoint(x: x, y: y)
   }

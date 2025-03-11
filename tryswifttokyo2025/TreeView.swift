@@ -33,42 +33,42 @@ struct FallingPetal: View {
 
   var body: some View {
     PetalShape()
-      .fill(LinearGradient(gradient: Gradient(colors: [Color(red: 1.0, green: 0.75, blue: 0.8).opacity(0.7), Color(red: 1.0, green: 0.5, blue: 0.7).opacity(0.7)]), startPoint: .top, endPoint: .bottom)) // Beautiful pink gradient with opacity
-      .frame(width: 30, height: 15) // Size of the petal
-      .shadow(color: .white, radius: 1)
-      .drawingGroup()
+      .fill(LinearGradient(gradient: Gradient(colors: [Color(red: 1.0, green: 0.75, blue: 0.8).opacity(0.8), Color(red: 1.0, green: 0.5, blue: 0.7).opacity(0.8)]), startPoint: .top, endPoint: .bottom))
+      .frame(width: 10, height: 5) // Petal size
       .position(position)
+//      .drawingGroup()
       .onAppear {
         animatePetal()
       }
   }
 
-  // Make animatePetal public
   public func animatePetal() {
     // Animate the petal falling down with a slight left drift
-    withAnimation(Animation.linear(duration: Double.random(in: 5...7)).repeatForever(autoreverses: false)) { // Slower falling
-      position.y = UIScreen.main.bounds.height + 50 // Move to the bottom of the screen
-      offset = -CGFloat.random(in: 50...300) // Increased random horizontal drift for more leftward movement
+    withAnimation(
+      Animation.linear(
+        duration:
+          Double.random(in: 6...15)) // falling speed
+            .repeatForever(autoreverses: false)) {
+      position.y = UIScreen.main.bounds.height + 50
+      // horizontal drift for more leftward movement
+      offset = -CGFloat.random(in: 150...350)
       position.x += offset
     }
   }
 }
 
-struct TreeView: View { // Renamed from SkyView to TreeView
+struct TreeView: View {
   let numberOfPetals: Int
   @State private var petalCount: Int = 0
 
   var body: some View {
     ZStack {
-//      Color(red: 0.53, green: 0.81, blue: 0.98) // Beautiful sky blue color
-//        .edgesIgnoringSafeArea(.all)
-
       ForEach(0..<petalCount, id: \.self) { index in
-        let startX = CGFloat.random(in: UIScreen.main.bounds.width * 0.9...UIScreen.main.bounds.width) // Start farther on the right side
+        // Petal appears on the right side of the screen
+        let startX = CGFloat.random(in: UIScreen.main.bounds.width * 0.5...UIScreen.main.bounds.width)
         let startY = CGFloat.random(in: 0...50)
         FallingPetal(startPosition: CGPoint(x: startX, y: startY))
           .onAppear {
-            // Start the animation immediately
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.1) {
               FallingPetal(startPosition: CGPoint(x: startX, y: startY)).animatePetal()
             }
@@ -76,7 +76,7 @@ struct TreeView: View { // Renamed from SkyView to TreeView
       }
     }
     .onAppear {
-      // Continuously generate petals
+      // Generate petals - speed
       Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
         if petalCount < numberOfPetals {
           petalCount += 1
