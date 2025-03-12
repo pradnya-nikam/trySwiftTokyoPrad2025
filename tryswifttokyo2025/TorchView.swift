@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ComplexViewWithoutDrawingGroup: View {
+struct TorchView: View {
   @State private var rotation: Double = 0
   @State private var animate = false
 
@@ -39,7 +39,7 @@ struct ComplexViewWithoutDrawingGroup: View {
 
 struct ComplexViewWithoutDrawingGroup_Previews: PreviewProvider {
   static var previews: some View {
-    ComplexViewWithoutDrawingGroup()
+    TorchView()
       .previewLayout(.sizeThatFits)
       .padding()
   }

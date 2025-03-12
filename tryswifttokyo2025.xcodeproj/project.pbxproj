@@ -51,12 +51,12 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ComplexView.swift,
-				ComplexView2.swift,
 				Ex1_TimeOfDay/SwiftUIView.swift,
 				Ex2_CherryBlossom/CloudView.swift,
 				Ex2_CherryBlossom/SceneryView.swift,
 				Ex2_CherryBlossom/SkyView.swift,
 				Ex2_CherryBlossom/TreeView.swift,
+				TorchView.swift,
 			);
 			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
 		};
@@ -147,13 +147,13 @@
 		50827FDD2D698A120034756A = {
 			isa = PBXGroup;
 			children = (
-				50827FE82D698A120034756A /* tryswifttokyo2025 */,
 				50827FFA2D698A150034756A /* tryswifttokyo2025Tests */,
 				508280042D698A150034756A /* tryswifttokyo2025UITests */,
 				5082801C2D698C8F0034756A /* TrySwiftTokyoiOS */,
 				5082802D2D698C910034756A /* TrySwiftTokyoTests */,
 				508280372D698C910034756A /* TrySwiftTokyoUITests */,
 				50827FE72D698A120034756A /* Products */,
+				50827FE82D698A120034756A /* tryswifttokyo2025 */,
 			);
 			sourceTree = "<group>";
 		};
