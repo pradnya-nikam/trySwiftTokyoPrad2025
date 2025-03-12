@@ -50,13 +50,13 @@
 		508280462D698D4D0034756A /* Exceptions for "tryswifttokyo2025" folder in "TrySwiftTokyoiOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CloudView.swift,
 				ComplexView.swift,
 				ComplexView2.swift,
-				SceneryView.swift,
-				SkyView.swift,
-				SwiftUIView.swift,
-				TreeView.swift,
+				Ex1_TimeOfDay/SwiftUIView.swift,
+				Ex2_CherryBlossom/CloudView.swift,
+				Ex2_CherryBlossom/SceneryView.swift,
+				Ex2_CherryBlossom/SkyView.swift,
+				Ex2_CherryBlossom/TreeView.swift,
 			);
 			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
 		};
