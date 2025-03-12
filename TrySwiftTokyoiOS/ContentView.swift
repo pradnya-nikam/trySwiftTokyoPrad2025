@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 //      TorchView()
-//      SwiftUIView()
+      TimeOfTheDayAnimationView()
 //      SkyView(numberOfClouds: 20)
 //      TreeView(numberOfPetals: 500)
-      SceneryView()
+//      SceneryView()
     }
 }
 

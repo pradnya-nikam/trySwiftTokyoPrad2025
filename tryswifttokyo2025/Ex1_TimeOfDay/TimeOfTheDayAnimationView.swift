@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct SwiftUIView: View {
+struct TimeOfTheDayAnimationView: View {
   @State private var currentGradientIndex = 0
   @State private var currentAngleIndex = 0
   @State private var circleColor = Color.yellow
@@ -110,11 +110,11 @@ struct SwiftUIView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
   static var previews: some View {
-    SwiftUIView()
+    TimeOfTheDayAnimationView()
   }
 }
 
 #Preview {
-  SwiftUIView()
+  TimeOfTheDayAnimationView()
 }
 
