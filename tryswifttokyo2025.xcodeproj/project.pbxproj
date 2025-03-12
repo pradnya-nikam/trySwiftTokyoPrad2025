@@ -53,9 +53,9 @@
 				BonusExamples/TorchView.swift,
 				Ex1_TimeOfDay/TimeOfTheDayAnimationView.swift,
 				Ex2_CherryBlossom/CloudView.swift,
+				Ex2_CherryBlossom/FallingPetalsView.swift,
 				Ex2_CherryBlossom/SceneryView.swift,
 				Ex2_CherryBlossom/SkyView.swift,
-				Ex2_CherryBlossom/TreeView.swift,
 			);
 			target = 5082801A2D698C8F0034756A /* TrySwiftTokyoiOS */;
 		};

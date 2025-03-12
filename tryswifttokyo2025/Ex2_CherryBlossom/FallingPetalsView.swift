@@ -57,7 +57,7 @@ struct FallingPetal: View {
   }
 }
 
-struct TreeView: View {
+struct FallingPetalsView: View {
   let numberOfPetals: Int
   @State private var petalCount: Int = 0
 
@@ -87,5 +87,5 @@ struct TreeView: View {
 }
 
 #Preview {
-  TreeView(numberOfPetals: 50)
+  FallingPetalsView(numberOfPetals: 50)
 }

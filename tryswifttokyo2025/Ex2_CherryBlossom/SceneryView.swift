@@ -9,7 +9,7 @@ struct SceneryView: View {
       VStack{
         Spacer()
           .frame(height: 350)
-        TreeView(numberOfPetals: 500)
+        FallingPetalsView(numberOfPetals: 100)
       }
       CherryBlossomTreeView()
     }
