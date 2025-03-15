@@ -35,6 +35,7 @@ struct FallingPetal: View {
     PetalShape()
       .fill(LinearGradient(gradient: Gradient(colors: [Color(red: 1.0, green: 0.75, blue: 0.8).opacity(0.8), Color(red: 1.0, green: 0.5, blue: 0.7).opacity(0.8)]), startPoint: .top, endPoint: .bottom))
       .frame(width: 10, height: 5) // Petal size
+      .opacity(0.8)
       .position(position)
 //      .drawingGroup()
       .onAppear {
@@ -68,15 +69,9 @@ struct FallingPetalsView: View {
         let startX = CGFloat.random(in: UIScreen.main.bounds.width * 0.5...UIScreen.main.bounds.width)
         let startY = CGFloat.random(in: 0...50)
         FallingPetal(startPosition: CGPoint(x: startX, y: startY))
-          .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.1) {
-              FallingPetal(startPosition: CGPoint(x: startX, y: startY)).animatePetal()
-            }
-          }
       }
     }
     .onAppear {
-      // Generate petals - speed
       Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
         if petalCount < numberOfPetals {
           petalCount += 1
