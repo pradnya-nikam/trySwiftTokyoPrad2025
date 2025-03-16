@@ -13,7 +13,7 @@ struct CloudView: View {
     CloudShape()
       .fill(Color.white)
       .frame(width: 220, height: 120)
-      .blur(radius: 3)
+      .blur(radius: 2)
 //      .shadow(color: .white, radius: 5, x: 0, y: 0)
       .drawingGroup()  // add/remove this line to see performance change
 
