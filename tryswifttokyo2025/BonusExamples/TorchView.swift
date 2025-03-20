@@ -11,9 +11,9 @@ struct TorchView: View {
         .edgesIgnoringSafeArea(.all)
 
       // Complex Animated Shapes
-      ForEach(0..<1000) { index in
+      ForEach(0..<500) { index in
         Circle()
-          .fill(Color.yellow.opacity(0.25))
+          .fill(Color.yellow.opacity(0.15))
           .frame(width: 50 + CGFloat(index) * 8)
 //          .scaleEffect(animate ? 1.5 : 1.0)
           .blur(radius: 1)
