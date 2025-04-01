@@ -7,12 +7,11 @@ struct SceneryView: View {
         .resizable().aspectRatio(contentMode: .fill)
         .edgesIgnoringSafeArea(.all)
 
-      // remove background from sky view so image from scenery is visible
-      SkyView(numberOfClouds: 20, showBackground: false)
-
       VStack {
-        Spacer().frame(height: 350)
-        FallingPetalsView(numberOfPetals: 100)
+        SkyView(numberOfClouds: 20, showBackground: false)
+          .frame(height: 350)
+        Spacer().frame(height: 1)
+        FallingPetalsView()
       }
 
       Image("sakura_tree")

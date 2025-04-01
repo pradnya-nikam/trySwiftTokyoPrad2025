@@ -15,34 +15,36 @@ struct SkyView: View {
   }
 
   var body: some View {
-    ZStack {
-      if showBackground {
-        background.edgesIgnoringSafeArea(.all)
+    GeometryReader { proxy in
+      ZStack {
+        if showBackground {
+          background.edgesIgnoringSafeArea(.all)
+        }
+        ForEach(cloudPositions.indices, id: \.self) { index in
+          CloudView()
+            .position(cloudPositions[index])
+        }
       }
-      ForEach(cloudPositions.indices, id: \.self) { index in
-        CloudView()
-          .position(cloudPositions[index])
+      .onAppear {
+        generateCloudPositions(viewSize: proxy.size)
+        startAnimatingClouds(viewSize: proxy.size)
       }
-    }
-    .onAppear {
-      generateCloudPositions()
-      startAnimatingClouds()
     }
   }
 
-  private func generateCloudPositions() {
+  private func generateCloudPositions(viewSize: CGSize) {
     while cloudPositions.count < numberOfClouds {
-      let newPosition = randomPosition()
+      let newPosition = randomPosition(viewSize: viewSize)
       if !cloudPositions.contains(where: { isOverlapping($0, newPosition) }) {
         cloudPositions.append(newPosition)
       }
     }
   }
 
-  private func randomPosition() -> CGPoint {
+  private func randomPosition(viewSize: CGSize) -> CGPoint {
     return CGPoint(
-      x: CGFloat.random(in: 0...UIScreen.main.bounds.width),
-      y: CGFloat.random(in: 0...UIScreen.main.bounds.height))
+      x: CGFloat.random(in: 0...viewSize.width),
+      y: CGFloat.random(in: 0...viewSize.height))
   }
 
   // Function to check if two points are overlapping
@@ -51,25 +53,22 @@ struct SkyView: View {
     return distance < 30
   }
 
-  private func startAnimatingClouds() {
+  private func startAnimatingClouds(viewSize: CGSize) {
     Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
       withAnimation(.easeInOut(duration: 3)) {
         for index in cloudPositions.indices {
           // Random horizontal and vertical movement
           let dx = CGFloat.random(in: -50...50)
           let dy = CGFloat.random(in: -20...20)
+          let newXPosition = cloudPositions[index].x + dx
+          let newYPosition = cloudPositions[index].y + dy
 
-          if cloudPositions[index].y < ((UIScreen.main.bounds.height) + 50) {
-            cloudPositions[index].y += dy
+          if newYPosition < viewSize.height && newYPosition > 0 {
+            cloudPositions[index].y = newYPosition
           }
-          else {
-            cloudPositions[index].y -= abs(dy)
-          }
-          if cloudPositions[index].x < ((UIScreen.main.bounds.width)+50) {
-            cloudPositions[index].x += dx
-          }
-          else {
-            cloudPositions[index].x -= abs(dx)
+
+          if newXPosition < viewSize.width && newXPosition > 0 {
+            cloudPositions[index].x = newXPosition
           }
         }
       }
