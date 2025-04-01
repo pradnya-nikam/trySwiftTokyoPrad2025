@@ -2,12 +2,23 @@ import SwiftUI
 
 struct SkyView: View {
   let numberOfClouds: Int
+  let showBackground: Bool
   @State private var cloudPositions = [CGPoint]()
+  let background = Color(red: 0.53, green: 0.81, blue: 0.98)
+
+  init(
+    numberOfClouds: Int,
+    showBackground: Bool = true
+  ) {
+    self.numberOfClouds = numberOfClouds
+    self.showBackground = showBackground
+  }
 
   var body: some View {
     ZStack {
-      // Add this if you want to display only this view since the clouds won't be visible on white background
-//      Image("background")
+      if showBackground {
+        background.edgesIgnoringSafeArea(.all)
+      }
       ForEach(cloudPositions.indices, id: \.self) { index in
         CloudView()
           .position(cloudPositions[index])
@@ -31,8 +42,7 @@ struct SkyView: View {
   private func randomPosition() -> CGPoint {
     return CGPoint(
       x: CGFloat.random(in: 0...UIScreen.main.bounds.width),
-      // Show clouds in top half of the screen
-      y: CGFloat.random(in: 0...UIScreen.main.bounds.height/2))
+      y: CGFloat.random(in: 0...UIScreen.main.bounds.height))
   }
 
   // Function to check if two points are overlapping
@@ -48,10 +58,18 @@ struct SkyView: View {
           // Random horizontal and vertical movement
           let dx = CGFloat.random(in: -50...50)
           let dy = CGFloat.random(in: -20...20)
-          cloudPositions[index].x += dx
-          // dont let the cloud enter into the lower half of the screen
-          if cloudPositions[index].y < ((UIScreen.main.bounds.height) / 2) {
+
+          if cloudPositions[index].y < ((UIScreen.main.bounds.height) + 50) {
             cloudPositions[index].y += dy
+          }
+          else {
+            cloudPositions[index].y -= abs(dy)
+          }
+          if cloudPositions[index].x < ((UIScreen.main.bounds.width)+50) {
+            cloudPositions[index].x += dx
+          }
+          else {
+            cloudPositions[index].x -= abs(dx)
           }
         }
       }
@@ -60,9 +78,6 @@ struct SkyView: View {
 }
 
 #Preview {
-  ZStack {
-    Color.blue.opacity(0.5)
-    SkyView(numberOfClouds: 15)
-  }
+  SkyView(numberOfClouds: 15, showBackground: true)
 }
 

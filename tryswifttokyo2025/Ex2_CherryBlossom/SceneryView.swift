@@ -7,7 +7,8 @@ struct SceneryView: View {
         .resizable().aspectRatio(contentMode: .fill)
         .edgesIgnoringSafeArea(.all)
 
-      SkyView(numberOfClouds: 30)
+      // remove background from sky view so image from scenery is visible
+      SkyView(numberOfClouds: 20, showBackground: false)
 
       VStack {
         Spacer().frame(height: 350)
