@@ -7,21 +7,25 @@ struct TorchView: View {
   var body: some View {
     ZStack {
       // Background Gradient
-      LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .top, endPoint: .bottom)
+      LinearGradient(
+        gradient: Gradient(colors: [.purple, .blue]),
+        startPoint: .top,
+        endPoint: .bottom
+      )
         .edgesIgnoringSafeArea(.all)
 
       // Complex Animated Shapes
-      ForEach(0..<500) { index in
+      ForEach(0..<1000) { index in
         Circle()
           .fill(Color.yellow.opacity(0.15))
-          .frame(width: 50 + CGFloat(index) * 8)
-//          .scaleEffect(animate ? 1.5 : 1.0)
+          .frame(width: 5 + CGFloat(index) * 8)
+//          .scaleEffect(animate ? 1.0 : 0.5)
           .blur(radius: 1)
-          .shadow(color: .yellow, radius: 3)
+          .shadow(color: .yellow, radius: 1)
           .offset(x: CGFloat(index) * 10, y: CGFloat(index) * 10)
           .rotationEffect(.degrees(rotation), anchor: .center)
 
-          .animation(Animation.easeInOut(duration: 0.1).repeatForever(autoreverses: true), value: animate)
+          .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: animate)
       }
     }
 //    .drawingGroup()
