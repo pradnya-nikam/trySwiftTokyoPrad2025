@@ -53,7 +53,9 @@
 				BonusExamples/TorchView.swift,
 				Ex1_TimeOfDay/TimeOfTheDayAnimationView.swift,
 				Ex2_CherryBlossom/CloudView.swift,
+				Ex2_CherryBlossom/FallingPetal.swift,
 				Ex2_CherryBlossom/FallingPetalsView.swift,
+				Ex2_CherryBlossom/PetalShape.swift,
 				Ex2_CherryBlossom/SceneryView.swift,
 				Ex2_CherryBlossom/SkyView.swift,
 			);
