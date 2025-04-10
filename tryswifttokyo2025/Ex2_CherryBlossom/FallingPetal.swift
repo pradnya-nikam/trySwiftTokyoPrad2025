@@ -35,7 +35,8 @@ struct FallingPetal: View {
       .rotationEffect(.degrees(rotation))
       .scaleEffect(scale)
       .opacity(opacity)
-      .drawingGroup()
+    // ADD OR REMOVE THIS LINE TO SEE PERFORMANCE CHANGES
+//      .drawingGroup()
       .position(position)
       .onAppear {
         animatePetalPosition()

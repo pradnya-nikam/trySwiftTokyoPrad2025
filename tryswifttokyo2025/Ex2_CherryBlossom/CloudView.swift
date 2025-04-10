@@ -15,7 +15,8 @@ struct CloudView: View {
       .frame(width: 220, height: 120)
       .blur(radius: 2)
 //      .shadow(color: .white, radius: 5, x: 0, y: 0)
-      .drawingGroup()  // add/remove this line to see performance change
+    // ADD OR REMOVE THIS LINE TO SEE PERFORMANCE CHANGES
+      .drawingGroup()
 
   }
 }
