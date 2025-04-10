@@ -12,9 +12,10 @@ struct ContentView: View {
 //      TorchView()
 //        .edgesIgnoringSafeArea(.all)
 //      TimeOfTheDayAnimationView()
-//      SkyView(numberOfClouds: 20)
+//      SkyView(numberOfClouds: 30)
 //      TreeView(numberOfPetals: 500)
-      SceneryView()
+//      SceneryView()
+      CatalogView()
     }
 }
 
